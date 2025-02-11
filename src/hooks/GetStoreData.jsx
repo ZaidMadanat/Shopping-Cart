@@ -18,13 +18,13 @@ const useStoreAPI = ({id}) => {
                 setProduct({ 
                    title: data.title, 
                    image: data.image, 
-                   rating: data.rating,
+                   rating: data.rating.rate,
                 });
             })
             .catch((error) => { 
                 setError(error.message); 
             }); 
-        }); 
+        }, [id]); 
 
         return {product, error}; 
 }; 
