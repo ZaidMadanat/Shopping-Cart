@@ -1,4 +1,11 @@
-export default function Home() { 
+import NavBar from './Navigation'
 
+
+export default function Home() { 
+    return ( 
+        <> 
+        <NavBar />
+        </>
+    )
 }
 
