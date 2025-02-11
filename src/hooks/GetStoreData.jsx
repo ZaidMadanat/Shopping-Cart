@@ -15,6 +15,7 @@ const useStoreAPI = ({id}) => {
                 return response.json();
             }) 
             .then((data) => { 
+                console.log(data);
                 setProduct({ 
                    title: data.title, 
                    image: data.image, 

@@ -1,4 +1,4 @@
-import displayCard from "./DisplayCard"; 
+import DisplayCard from "./DisplayCard"; 
 
 export default function Home() { 
     return ( 
@@ -7,9 +7,9 @@ export default function Home() {
             <p>This is your place to shop for all your needs.</p>
             <h2>Take a look at our brand new selection</h2>
             <div className="NEW">
-                <displayCard id={1}/> 
-                <displayCard id={2}/> 
-                <displayCard id={3}/>  
+                <DisplayCard id={1}/> 
+                <DisplayCard id={2}/> 
+                <DisplayCard id={3}/>  
             </div>
         </div>
     )

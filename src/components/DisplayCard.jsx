@@ -1,6 +1,6 @@
 import useStoreAPI from "../hooks/GetStoreData";
 
-function displayCard({id}) { 
+function DisplayCard({id}) { 
     const {product, error} = useStoreAPI({id}); 
     if (error) return <p>Error: {error} </p>;
     if (!product) return <p>Loading...</p>; 
@@ -14,5 +14,5 @@ function displayCard({id}) {
     ); 
 }
 
-export default displayCard; 
+export default DisplayCard; 
 
