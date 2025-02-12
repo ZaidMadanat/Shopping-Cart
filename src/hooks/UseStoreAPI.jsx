@@ -17,9 +17,12 @@ const useStoreAPI = ({id}) => {
             .then((data) => { 
                 console.log(data);
                 setProduct({ 
+                   id: data.id, 
                    title: data.title, 
                    image: data.image, 
                    rating: data.rating.rate,
+                   price: data.price, 
+                   description: data.description,
                 });
             })
             .catch((error) => { 

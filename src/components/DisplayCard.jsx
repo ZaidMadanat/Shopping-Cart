@@ -1,4 +1,4 @@
-import useStoreAPI from "../hooks/GetStoreData";
+import useStoreAPI from "../hooks/UseStoreAPI";
 
 function DisplayCard({id}) { 
     const {product, error} = useStoreAPI({id}); 
@@ -7,9 +7,9 @@ function DisplayCard({id}) {
 
     return ( 
         <div className="card"> 
-        <h1>{product.title}</h1>
+        <h3>{product.title}</h3>
         <img src={product.image} alt={product.title}/>
-        <h3>Rating: {product.rating}</h3>
+        <h4>Rating: {product.rating}</h4>
         </div>
     ); 
 }
