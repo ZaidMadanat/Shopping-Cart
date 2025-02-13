@@ -7,7 +7,7 @@ Navigation bar for the top to change between each file.
 function NavBar() { 
     return (
         <div className="Navigation-Fixed">
-            <img src="./assets/ZaidMart.png" alt="Zaid Mart" className="Logo"></img>
+            <img src="../assets/ZaidMart.jpg" alt="Zaid Mart" className="Logo"></img>
             <nav className='navigation'> 
                 <ul> 
                     <li> 

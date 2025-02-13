@@ -5,9 +5,9 @@ import App from './App.jsx';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
 // importing the nav bar
-import Home from './components/Home.jsx';
 import Shop from './components/Shop.jsx';
 import Cart from './components/Cart.jsx';
+import ProductSingle from './components/ProductSingle.jsx'
 
 const router = createBrowserRouter([ 
   { 
@@ -22,6 +22,10 @@ const router = createBrowserRouter([
     path: "/Shop", 
     element: <Shop />, 
   }, 
+  { 
+    path: "/Shop/:id",
+    element: <ProductSingle />,
+  },
   { 
     path: "/Cart", 
     element: <Cart />,

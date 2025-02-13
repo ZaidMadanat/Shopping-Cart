@@ -1,5 +1,9 @@
 import {useState, useEffect} from "react"; 
 
+/**
+Fetches one product and assigns it product as an object with 
+properties id, title, image, rating, price, description. 
+ */
 const useStoreAPI = ({id}) => { 
     const [product, setProduct] = useState(null); 
     const [error, setError] = useState(null);
