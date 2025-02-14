@@ -45,7 +45,7 @@ export const ProductGrid = styled.div`
   fixed image size, and basic styling
 */
 export const ProductCard = styled.div`
-  background-color: #fff;
+  background-color: #f0f4f8;
   border-radius: 8px;
   box-shadow: 0 3px 12px rgba(0, 0, 0, 0.05);
   padding: 1rem;
