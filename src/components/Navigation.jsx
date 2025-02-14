@@ -1,29 +1,39 @@
 import { Link } from "react-router-dom"; 
-
+import { 
+    NavContainer, 
+    Logo, 
+    NavItem, 
+    CartNavItem, 
+    NavMenu, 
+    CartIcon
+} from "../styles/Navigation.styled"
+import ZaidLogo from "../assets/ZaidMart.png";
+import Cart from "../assets/cart-outline.svg";
 
 /* 
 Navigation bar for the top to change between each file. 
 */
-function NavBar() { 
+function NavBar() {
     return (
-        <div className="Navigation-Fixed">
-            <img src="../assets/ZaidMart.jpg" alt="Zaid Mart" className="Logo"></img>
-            <nav className='navigation'> 
-                <ul> 
-                    <li> 
-                        <Link to="/Home">Home</Link>
-                    </li>
-                    <li>
-                        <Link to="/Shop">Shop</Link>
-                    </li>
-                    <li className="Shopping_Cart"> 
-                        <Link to="/Cart">Cart</Link>
-                    </li>
-                </ul>
-            </nav>
-        </div>
-    )
-}
+      <NavContainer>
+        <Logo src={ZaidLogo} alt="Zaid Mart" />
+
+        <NavMenu>
+          <NavItem>
+            <Link to="/Home">Home</Link>
+          </NavItem>
+          <NavItem>
+            <Link to="/Shop">Shop</Link>
+          </NavItem>
+          <CartNavItem>
+            <Link to="/Cart">
+            <CartIcon src={Cart} alt="Cart" />
+            </Link>
+          </CartNavItem>
+        </NavMenu>
+      </NavContainer>
+    );
+  }
 
 
 export default NavBar; 
