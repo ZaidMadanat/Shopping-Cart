@@ -4,7 +4,6 @@ import HandleBuy from "../helpers/handlebuy.jsx";
 import useStoreAPI from "../hooks/UseStoreAPI";
 import CartContext from "../context/CartContext.jsx";
 import {
-    ProductSingleContainer,
     ProductCard,
     Popup
   } from "../styles/ProductSingle.styling.js";
@@ -23,22 +22,21 @@ import {
     if (!product) return <p>Loading...</p>;
   
     return (
-      <ProductSingleContainer>
-        {isVisible && <Popup>Added to Cart!</Popup>}
-  
-        <ProductCard>
-          <img src={product.image} alt={product.title} />
-          <h3>{product.title}</h3>
-          <p>{product.description}</p>
-  
-          <div className="card-buy">
-            <h4>Price: ${product.price}</h4>
-            <button onClick={() => HandleBuy({ product, setVisible, addToCart, setCart })}>
-              Add to Cart
-            </button>
-          </div>
-        </ProductCard>
-      </ProductSingleContainer>
+      <>
+      {isVisible && <Popup>Added to Cart!</Popup>}
+
+      <ProductCard>
+        <img src={product.image} alt={product.title} />
+        <h3>{product.title}</h3>
+        <p>{product.description}</p>
+        <div className="card-buy">
+          <h4>Price: ${product.price}</h4>
+          <button onClick={() => HandleBuy({ product, setVisible, addToCart, setCart })}>
+            Add to Cart
+          </button>
+        </div>
+      </ProductCard>
+    </>
     );
   }
   

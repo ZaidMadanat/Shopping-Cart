@@ -1,51 +1,36 @@
-// src/styles/ShopStyles.js
 import styled from "styled-components";
 
-/* 
-  Wraps your entire Shop page (or section).
-  We'll center content and give it some padding.
-*/
 export const ShopContainer = styled.div`
   min-height: 100vh;
   padding: 2rem;
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #ffffff;
+  background-color: #f0f4f8;
 
 `;
 
-/*
-  A responsive grid for product cards. 
-  By default, it uses 4 columns, 
-  then shrinks to 2 columns on smaller screens, 
-  and 1 column on very small screens.
-*/
 export const ProductGrid = styled.div`
   width: 100%;
   max-width: 1200px;
-  margin: 0 auto;               /* Center the grid */
+  margin: 0 auto;               
   display: grid;
   gap: 2rem;
   grid-template-columns: repeat(4, 1fr);
 
-  /* Tablets or mid-size screens */
+  
   @media (max-width: 768px) {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  /* Phones or smaller screens */
+  
   @media (max-width: 480px) {
     grid-template-columns: 1fr;
   }
 `;
 
-/*
-  Each product card with box-shadow, 
-  fixed image size, and basic styling
-*/
 export const ProductCard = styled.div`
-  background-color: #f0f4f8;
+  background-color: #fff;
   border-radius: 8px;
   box-shadow: 0 3px 12px rgba(0, 0, 0, 0.05);
   padding: 1rem;

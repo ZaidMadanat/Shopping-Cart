@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-/* Container at the top, styled as a sticky navbar */
+
 export const NavContainer = styled.div`
   margin: 0;  
   display: flex;
@@ -16,7 +16,7 @@ export const NavContainer = styled.div`
 `;
 
 export const Logo = styled.img`
-  width: 120px; /* Adjust as needed */
+  width: 120px; 
   height: auto;
   max-width: 100%;
 `;
@@ -37,7 +37,7 @@ export const NavItem = styled.li`
     transition: color 0.3s ease;
 
     &:hover {
-      color: #f06666; /* highlight color on hover */
+      color: #f06666; 
     }
   }
 `;

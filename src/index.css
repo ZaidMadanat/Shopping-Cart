@@ -5,6 +5,7 @@ html, body {
   height: 100%; 
   overflow-x: hidden; 
   box-sizing: border-box;
+  background-color: #f0f4f8;
 }
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;

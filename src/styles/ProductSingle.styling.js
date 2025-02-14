@@ -1,25 +1,14 @@
 import styled from "styled-components";
 
-export const ProductSingleContainer = styled.div`
-  /* Full-page background for product details */
-  min-height: 100vh;
-  width: 100%;
-  background-color: #f0f4f8;
-  display: flex;
-  justify-content: center;
-  align-items: flex-start; /* So card sits near the top */
-  padding: 2rem;
-  box-sizing: border-box;
-`;
 
 export const ProductCard = styled.div`
-  /* The "card-full" styling */
   background-color: #fff;
-  width: 500px; /* Adjust as needed */
+  width: 500px; 
   border-radius: 8px;
   box-shadow: 0 3px 12px rgba(0, 0, 0, 0.05);
   padding: 2rem;
   text-align: center;
+  margin: 3rem auto; 
 
   img {
     width: 200px; 
@@ -58,7 +47,7 @@ export const ProductCard = styled.div`
       padding: 0.6rem 1.2rem;
       font-size: 1rem;
       font-weight: 500;
-      background-color: #4CAF50; 
+      background-color: #4caf50; 
       color: #fff;
       border: none;
       border-radius: 6px;
@@ -74,7 +63,7 @@ export const ProductCard = styled.div`
 
 export const Popup = styled.div`
   position: fixed;
-  top: 80px; /* Below the navbar */
+  top: 100px; 
   left: 50%;
   transform: translateX(-50%);
   background-color: #4caf50;
@@ -83,5 +72,5 @@ export const Popup = styled.div`
   border-radius: 6px;
   box-shadow: 0 3px 12px rgba(0,0,0,0.2);
   font-size: 1rem;
-  z-index: 999;
+  z-index: 9999; 
 `;

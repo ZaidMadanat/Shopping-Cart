@@ -14,7 +14,7 @@ export const HomeContainer = styled.div`
 export const HomeTitle = styled.h1`
   font-size: 2.5rem;
   margin-bottom: 1rem;
-  color: #333;
+  color: #000;
 `;
 
 export const HomeParagraph = styled.p`
