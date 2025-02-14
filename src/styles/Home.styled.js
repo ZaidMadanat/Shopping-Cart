@@ -2,11 +2,9 @@ import styled from "styled-components";
 
 export const HomeContainer = styled.div`
   min-height: 100vh;
-  min-width: 100vw; 
-  max-width: 100vw;
   background-color: #f0f4f8;
   box-shadow: inset 0 0 100px rgba(0,0,0,0.05);
-  
+  width: 100vw;
   display: flex;
   flex-direction: column;
   align-items: center;

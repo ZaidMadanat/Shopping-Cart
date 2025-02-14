@@ -3,20 +3,22 @@ import styled from "styled-components";
 /* Container at the top, styled as a sticky navbar */
 export const NavContainer = styled.div`
   margin: 0;  
-  max-width: 100vw;
   display: flex;
   align-items: center;
-  padding:  0.5rem 0.5rem;
+  width: 100%;
+  overflow-x: hidden;
   background-color: #ffffff;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   position: sticky;
   top: 0;
   z-index: 1000;
+  box-sizing: border-box;
 `;
 
 export const Logo = styled.img`
   width: 120px; /* Adjust as needed */
   height: auto;
+  max-width: 100%;
 `;
 
 export const NavMenu = styled.ul`
@@ -24,6 +26,7 @@ export const NavMenu = styled.ul`
   margin-left: auto; 
   gap: 1.5rem;
   list-style: none;
+  padding-right: 0;
 `;
 
 export const NavItem = styled.li`
@@ -45,5 +48,6 @@ export const CartNavItem = styled(NavItem)`
 export const CartIcon = styled.img`
   width: 24px;
   height: 24px;
+  max-width: 100%;
 `;
 
