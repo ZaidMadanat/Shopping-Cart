@@ -1,24 +1,16 @@
-//
-// Takes in the product and gives it to add cart to add to the ID. 
-// displays a "pop" up that will last 5 seconds before going away. 
 
-/**
- Assigns 5 seconds 
+/** 
  * @param {*} param0 
- * @returns 
+ * changes visibility of added to card pop up. 
+ * {@link addToCart} to add product. 
  */
-import { useContext } from "react";
-import CartContext from "../context/CartContext";
-
-function HandleBuy({product,setVisibility}) { 
-    const {setCart, addToCart} = useContext(CartContext);
-
+function HandleBuy({ product, setVisible, addToCart, setCart }) { 
     if (!product) return; 
 
     addToCart(setCart, product); 
-    setVisibility(true);
+    setVisible(true);
     setTimeout(() => { 
-        setVisibility(false);
+        setVisible(false);
     },5000); 
 }
 

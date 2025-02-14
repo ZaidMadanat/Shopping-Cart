@@ -1,6 +1,6 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import ProvideCart from "./context/ProvideCart"
-import NavBar from "./components/NavBar";
+import NavBar from "./components/Navigation";
 import Shop from "./components/Shop";
 import ProductSingle from "./components/ProductSingle";
 import Cart from "./components/Cart";
