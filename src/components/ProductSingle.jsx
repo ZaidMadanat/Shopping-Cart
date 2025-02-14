@@ -1,26 +1,27 @@
 import { useParams } from "react-router-dom";
-import NavBar from "./Navigation";
-import HandleBuy from "../helpers/handlebuy";
+import HandleBuy from "../helpers/handlebuy.jsx";
 import useStoreAPI from "../hooks/UseStoreAPI";
 
 
 
-// Route to ID, have NAVBAR up top to return to shop. 
-// Once the image or title is clicked we return  
-// IMG, TITLE, DESCRIPTION, PRICE, RATING, BUY NOW BUTTON 
-// ADD HANDLER FOR BUY NOw button so that once pressed update cart to one. 
-// once buy now button change to have [- (num) +] 
-// Cart button once pressed will have the data saved. 
-// so in productSingle we will have to print out the correct html of the page
-// and for the onclick handling of buy we need to save the item in the cart 
-// when - is pressed we will handle that by reducing the count 
+// Route to ID, have NAVBAR up top to return to shop. DONE
+// Once the image or title is clicked we return  DONE
+// IMG, TITLE, DESCRIPTION, PRICE, RATING, BUY NOW BUTTON All DONE 
+// In HandleBuy display a small pop up added to cart. 
+// Add to card functionality we have to create an array that takes in the data from the store API so we will pass in the ID 
+// from the data and then put in in an array and then map to the cart. 
+// Inside Cart we will have the Name of the item class: card-buy 
+// Price and total price 
+// Button to add/ subtract ammount 
 //--------------------------------------------------------------------------
 
+/**
+ Returns each product's details along with a dynamic add to card button {@link HandleBuy}
+ * @returns 
+ */
 function ProductSingle() {
+    [isVisible, setVisible] = useState(false);
     let {id} = useParams();
-    console.log(id);
-    id = Number(id);
-    console.log("This is the new number: " + id);
 
     const { product, error } = useStoreAPI({id});
 
@@ -29,14 +30,14 @@ function ProductSingle() {
     
     return ( 
         <>
-        <NavBar />
+        {isVisible && <div className="visible">Added to Cart!</div> }
         <div className="card-full">
             <img src={product.image} alt={product.title}/>
             <h3>{product.title}</h3>
             <p>{product.description}</p>
             <div className="card-buy"> 
                 <h4>Price: ${product.price}</h4>
-                <button onClick={HandleBuy}>Add to Cart</button>
+                <button onClick={() => HandleBuy({product, setVisible})}>Add to Cart</button>
             </div>
         </div>
         </>

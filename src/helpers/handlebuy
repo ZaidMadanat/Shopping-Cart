@@ -1,5 +1,0 @@
-function HandleBuy() { 
-
-}
-
-export default HandleBuy

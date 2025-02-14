@@ -5,7 +5,6 @@ import useStoreAPI from "../hooks/UseStoreAPI";
  using the useStoreAPI function component 
  returning the product in title-image-rating format
 */
- 
 function DisplayCard({id}) { 
     const {product, error} = useStoreAPI({id}); 
     if (error) return <p>Error: {error} </p>;

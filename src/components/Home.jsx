@@ -1,5 +1,7 @@
 import DisplayCard from "./DisplayCard"; 
-
+/**
+ Greats user and showcases the new product selection. 
+ */
 export default function Home() { 
     return ( 
         <div className="HomePage"> 
