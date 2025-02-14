@@ -2,8 +2,6 @@ import { useParams } from "react-router-dom";
 import HandleBuy from "../helpers/handlebuy.jsx";
 import useStoreAPI from "../hooks/UseStoreAPI";
 
-
-
 // Route to ID, have NAVBAR up top to return to shop. DONE
 // Once the image or title is clicked we return  DONE
 // IMG, TITLE, DESCRIPTION, PRICE, RATING, BUY NOW BUTTON All DONE 
@@ -20,9 +18,9 @@ import useStoreAPI from "../hooks/UseStoreAPI";
  * @returns 
  */
 function ProductSingle() {
-    [isVisible, setVisible] = useState(false);
     let {id} = useParams();
 
+    [isVisible, setVisible] = useState(false);
     const { product, error } = useStoreAPI({id});
 
     if (error) return <p>Error: {error}</p>;

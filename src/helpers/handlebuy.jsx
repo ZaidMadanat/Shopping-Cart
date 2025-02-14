@@ -7,9 +7,15 @@
  * @param {*} param0 
  * @returns 
  */
+import { useContext } from "react";
+import CartContext from "../context/CartContext";
+
 function HandleBuy({product,setVisibility}) { 
+    const {setCart, addToCart} = useContext(CartContext);
+
     if (!product) return; 
-    addToCart(product); 
+
+    addToCart(setCart, product); 
     setVisibility(true);
     setTimeout(() => { 
         setVisibility(false);
