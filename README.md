@@ -11,8 +11,8 @@ I had to go out of my way and learn useContext something which was not given to 
 The other bigger issue was figuring out how exactly to handle the cart. That was by far the hardest part in the whole project. 
 
 ## Images 
-![Welcome Page](./src/assets/home.png)
+![Welcome Page](./src/assets/Home.png)
 ![Shopping Page](./src/assets/Shop.png)
 ![Product](./src/assets/Product.png)
-![Cart](image.png)
+![Cart](./src/assets/Cart.png)
 
