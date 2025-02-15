@@ -7,6 +7,9 @@ export const ShopContainer = styled.div`
   flex-direction: column;
   align-items: center;
   background-color: #f0f4f8;
+  h1 { 
+  color: #333;
+  }
 
 `;
 

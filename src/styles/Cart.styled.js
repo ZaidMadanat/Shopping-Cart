@@ -14,6 +14,9 @@ export const CartContainer = styled.div`
     margin-bottom: 1rem;
     color: #333;
   }
+    P { 
+      color: #333;
+    }
 `;
 
 export const CartList = styled.ul`
