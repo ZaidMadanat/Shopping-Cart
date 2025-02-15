@@ -9,3 +9,10 @@ This project has taught me a lot about using routes and useEffect.
 I had to go out of my way and learn useContext something which was not given to use during TOP. But it was either 
 `useContext` or having to pass all the way from main `setCart` and `cart` something that would have been tedious and didn't look clean. 
 The other bigger issue was figuring out how exactly to handle the cart. That was by far the hardest part in the whole project. 
+
+## Images 
+![Welcome Page](./src/assets/home.png)
+![Shopping Page](./src/assets/Shop.png)
+![Product](./src/assets/Product.png)
+![Cart](image.png)
+
